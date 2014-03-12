@@ -1,6 +1,6 @@
 # grunt-stylestats
 
-> Analyze your CSS using stylestats.
+Analyze your CSS using [stylestats](https://github.com/t32k/stylestats).
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -37,6 +37,8 @@ grunt.initConfig({
 
 ### Options
 
+**!!! Custom options don't work yet !!!**
+
 The options are exactly the same as in the [stylestats library](https://github.com/t32k/stylestats/blob/master/lib/defaultOptions.js).
 
 ```json
@@ -62,39 +64,40 @@ The options are exactly the same as in the [stylestats library](https://github.c
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+#### Basic example
+The most basic example of using grunt-stylestats. Just pass the configuration object a `src` property with an array of files to analyze ([globbing](http://gruntjs.com/configuring-tasks#globbing-patterns) allowed).
 
 ```js
 grunt.initConfig({
   stylestats: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+    src: ['path/to/style.css']
+  }
+});
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+#### Multiple targets
+If you need to configure multiple targets, you can do it this way:
 
 ```js
 grunt.initConfig({
   stylestats: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
+    dev: {
+      src: ['src/style.css']
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+    dist: {
+      src: ['dist/style.css']
+    }
+  }
+});
 ```
+
+#### Custom options
+_Example will follow as soon as custom options work_
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
+1. Fork
+2. Clone
+3. Fix / Enhance
+4. Commit
+5. Pull Request
+6. Smile :)

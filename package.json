@@ -23,7 +23,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "scripts": {
     "test": "grunt test"
@@ -38,9 +38,18 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "stylesheets",
+    "css",
+    "performance",
+    "analysis"
   ],
   "dependencies": {
-    "stylestats": "^1.1.1"
+    "stylestats": "^1.1.1",
+    "cli-table": "^0.3.0",
+    "commander": "^2.1.0",
+    "underscore": "^1.6.0",
+    "underscore.string": "^2.3.3",
+    "numeral": "^1.5.3"
   }
 }
