@@ -37,9 +37,7 @@ grunt.initConfig({
 
 ### Options
 
-**!!! Custom options don't work yet !!!**
-
-The options are exactly the same as in the [stylestats library](https://github.com/t32k/stylestats/blob/master/lib/defaultOptions.js).
+The options are exactly the same as in the [stylestats library](https://github.com/t32k/stylestats/blob/master/lib/defaultOptions.js). Those are the defaults:
 
 ```json
 {
@@ -92,7 +90,22 @@ grunt.initConfig({
 ```
 
 #### Custom options
-_Example will follow as soon as custom options work_
+Custom options, as [shown above](#options), are simply passed to the options object (either task-specific or target-specific).
+
+```js
+grunt.initConfig({
+  stylestats: {
+    options: {
+      propertiesCount: 3,
+      mediaQueries: false,
+      size: false,
+      totalUniqueColors: false,
+      totalUniqueFontSizes: false
+    },
+    src: ['path/to/style.css']
+  }
+});
+```
 
 ## Contributing
 1. Fork

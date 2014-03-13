@@ -31,9 +31,17 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     stylestats: {
       default_options: {
+        src: ['test/fixtures/test.css']
+      },
+      custom_options: {
         options: {
+          propertiesCount: false,
+          mediaQueries: false,
+          size: false,
+          totalUniqueColors: false,
+          totalUniqueFontSizes: false
         },
-        src: ['test/fixtures/test.css'],
+        src: ['test/fixtures/test.css']
       }
     },
 

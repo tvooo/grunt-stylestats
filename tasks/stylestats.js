@@ -20,12 +20,10 @@ var numeral = require('numeral');
 module.exports = function(grunt) {
   grunt.registerMultiTask('stylestats', 'Analyze your CSS using stylestats.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({});// require('./node_modules/stylestats/lib/defaultOptions'));
-
+    var options = this.options( require('stylestats/lib/defaultOptions'));
     this.files.forEach(function(f) {
       f.src.forEach( function( file ) {
-        var result = new stylestats(file).parse();
-        //console.log( stats );
+        var result = new stylestats(file, options).parse();
         var table = new Table({
           style: {
             head: ['cyan'],
@@ -53,7 +51,7 @@ module.exports = function(grunt) {
           } else {
             stats[prop] = _.isArray(result[key]) ? result[key].join('\n') : result[key];
             if (stats[prop] === '') {
-                stats[prop] = 'N/A'
+                stats[prop] = 'N/A';
             }
           }
           table.push(stats);
