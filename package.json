@@ -1,7 +1,7 @@
 {
   "name": "grunt-stylestats",
   "description": "Analyze your stylesheets using stylestats.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/tvooo/grunt-stylestats",
   "author": {
     "name": "Tim von Oldenburg",
@@ -29,9 +29,9 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-jshint": "~0.9.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
     "grunt": "~0.4.1"
   },
   "peerDependencies": {
@@ -45,7 +45,7 @@
     "analysis"
   ],
   "dependencies": {
-    "stylestats": "^1.1.1",
+    "stylestats": "^2.1.0",
     "cli-table": "^0.3.0",
     "underscore": "^1.6.0",
     "underscore.string": "^2.3.3",
