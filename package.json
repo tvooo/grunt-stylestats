@@ -1,7 +1,7 @@
 {
   "name": "grunt-stylestats",
   "description": "Analyze your stylesheets using stylestats.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/tvooo/grunt-stylestats",
   "author": {
     "name": "Tim von Oldenburg",
@@ -45,7 +45,7 @@
     "analysis"
   ],
   "dependencies": {
-    "stylestats": "^2.1.0",
+    "stylestats": "^2.3.0",
     "cli-table": "^0.3.0",
     "underscore": "^1.6.0",
     "underscore.string": "^2.3.3",
