@@ -35,11 +35,13 @@ module.exports = function(grunt) {
       },
       custom_options: {
         options: {
-          propertiesCount: false,
-          mediaQueries: false,
-          size: false,
-          totalUniqueColors: false,
-          totalUniqueFontSizes: false
+          stylestats: {
+            propertiesCount: false,
+            mediaQueries: false,
+            size: false,
+            totalUniqueColors: false,
+            totalUniqueFontSizes: false
+          },
         },
         src: ['test/fixtures/test.css']
       }

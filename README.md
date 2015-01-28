@@ -95,12 +95,16 @@ Custom options, as [shown above](#options), are simply passed to the options obj
 ```js
 grunt.initConfig({
   stylestats: {
+
     options: {
-      propertiesCount: 3,
-      mediaQueries: false,
-      size: false,
-      totalUniqueColors: false,
-      totalUniqueFontSizes: false
+      // Task-specific options go here.
+      stylestats: {
+        propertiesCount: 3,
+        mediaQueries: false,
+        size: false,
+        totalUniqueColors: false,
+        totalUniqueFontSizes: false
+      },
     },
     src: ['path/to/style.css']
   }

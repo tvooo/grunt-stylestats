@@ -6,8 +6,6 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
-
 var stylestats = require('stylestats');
 var test = require('stylestats/lib/defaultOptions');
 var Table = require('cli-table');
@@ -18,9 +16,16 @@ _.str.include('Underscore.string', 'string');
 var numeral = require('numeral');
 
 module.exports = function(grunt) {
+
+  'use strict';
+
+  var defaults = {
+    stylestats: require('stylestats/lib/defaultOptions')
+  };
+
   grunt.registerMultiTask('stylestats', 'Analyze your CSS using stylestats.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options( require('stylestats/lib/defaultOptions'));
+    var options = this.options(defaults);
     this.files.forEach(function(f) {
       f.src.forEach( function( file ) {
         var table = new Table({
@@ -34,7 +39,7 @@ module.exports = function(grunt) {
             'right': '' , 'right-mid': '' , 'middle': ' '
           }
         });
-        var stats = new stylestats(file, options);
+        var stats = new stylestats(file, options.stylestats);
         stats.parse( function( result ) {
           Object.keys(result).forEach(function(key) {
             var stats = {};
