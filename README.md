@@ -97,6 +97,7 @@ grunt.initConfig({
   stylestats: {
 
     options: {
+      reportFile: false, // set path/to/report.json
       // Task-specific options go here.
       stylestats: {
         propertiesCount: 3,
