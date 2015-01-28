@@ -35,6 +35,7 @@ module.exports = function(grunt) {
       },
       custom_options: {
         options: {
+          reportFile: 'reports.json',
           stylestats: {
             propertiesCount: false,
             mediaQueries: false,
@@ -43,7 +44,10 @@ module.exports = function(grunt) {
             totalUniqueFontSizes: false
           },
         },
-        src: ['test/fixtures/test.css']
+        src: [
+          'test/fixtures/test.css',
+          'test/fixtures/test2.css'
+        ]
       }
     },
 
