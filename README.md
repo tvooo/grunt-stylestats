@@ -37,7 +37,7 @@ grunt.initConfig({
 
 ### Options
 
-The options are exactly the same as in the [stylestats library](https://github.com/t32k/stylestats/blob/master/lib/defaultOptions.js). Those are the defaults:
+The options are exactly the same as in the [stylestats library](https://github.com/t32k/stylestats/blob/master/assets/default.json). Those are the defaults:
 
 ```json
 {
